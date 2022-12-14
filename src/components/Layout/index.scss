@@ -1,0 +1,187 @@
+/* I can select multiple classNames at once by using commas. */
+.portfolio-page,
+.homework-page {
+    .text-zone {
+        /*Position absolute takes the element out of the flow of the page and allows it to be placed absolutely; that is, on top of other items or wherever I so choose. */
+        position: absolute;
+        left: 10%;
+        top: 10%; 
+        width: 75%;
+        vertical-align: middle;
+        /*Flexbox allows the pages to reorient its elements based on the dimensions of the page. */
+        display: flexbox;
+        max-height: 90%;
+
+        h1 {
+            font-size: 53px;
+            font-family: 'Helvetica';
+            color: #3BBA9C;
+            /*Margins allows me to position the item more specifically by shifting them slightly within the container it lives in. */
+            margin-top: 0;
+            /*Position relative slightly adjusts the item's normal position, which is changed by further specifications, like left or right. */
+            position: relative;
+            left: 40px;
+            margin-bottom: 0px;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-family: 'Helvetica';
+            color: #3BBA9C;
+            margin-top: -15px;
+            margin-bottom: -5px;
+
+        }
+
+        a {
+            font-size: 15px;
+            color: #3BBA9C;
+            /*Text decoration is the styling specifically on the text. */
+            text-decoration: underline;
+        }
+
+        .endLink{
+            position: absolute;
+            left: 270px;
+        }
+
+    }
+
+    ul {
+        /*List-style: none ensures that there's no "typical" list indication, like bullet points. */
+        list-style: none;
+        position: absolute;
+    }
+
+    .projectImage {
+        /*FLoat allows me to shift the item to a specific position in its container, here, to the left-most spot. */
+        float: left;
+ 
+        margin: 0 20px 0 0;
+        width: 250px;
+        /* Auto height makes the height of the page relative to the dimensions of the browser that the viewer is using. */
+        height: auto;
+        opacity: 0;
+    }
+
+    /* Fade in Left lets the item animate from the left of the screen to its target position, and stay there when set to fill-mode: forwards. */
+    #firstImg{
+        animation: fadeInLeft 2s 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 3.1s;
+    }
+
+    #secondImg{
+        animation: fadeInLeft 2s 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 3.2s;
+    }
+
+    #thirdImg{
+        animation: fadeInLeft 2s 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 3.3s;
+    }
+
+    li {
+        padding: 40px 0px;
+        margin-top: 50px;
+        opacity: 0;
+        /* Each individual item is set to fade in upwards, and creates a "tessolation" effect. */
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
+    }
+
+
+    #firstP {
+        font-size: 15px;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 300;
+        min-width: fit-content;
+        /* Another built-in animation, pulse makes the element pop for a duration. */
+        animation: pulse 1s;
+        animation-delay: 3.1s;   
+    }
+
+
+
+    #secondP {
+        font-size: 15px;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 300;
+        min-width: fit-content;
+        animation: pulse 1s;
+        animation-delay: 3.2s;
+    }
+
+
+
+    #thirdP {
+        font-size: 15px;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 300;
+        min-width: fit-content;
+        animation: pulse 1s;
+        animation-delay: 3.3s;
+    }
+
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
+
+.container{
+    width: 100%;
+    height: 90%;
+    min-height: 566px;
+    position: absolute;
+    opacity: 0;
+    top: 5%;
+    left: 30px;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+    /*This ensures that if there are multiple items in the page, a user is able to scroll. */
+    overflow-y: scroll;
+}
+
+.about-page{
+    .text-zone{
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35%;
+        vertical-align: middle;
+        display: table-cell;
+        max-height: 90%;
+        
+
+        h1{
+            font-size: 2.5vw;
+            font-family: 'Helvetica';
+            color: #3BBA9C;
+            font-weight: 400;
+            margin-top: 0;
+            left: 40px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+    }
+
+    p{
+        font-size: .8vw;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 300;
+        min-width: fit-content;
+    }
+}

@@ -1,0 +1,130 @@
+.home-page{
+    .text-zone{
+          /* Position absolute takes the logo out of the flow of the page and allows it to be placed exactly where I want it, that is, the center of the screen. */
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+    }
+
+    h1 {
+        color: white;
+        /* having font-size with vw (view width) allows the page to resize the font depending on page dimensions.*/
+        font-size: 2.5vw;
+        margin: 0;
+        font-family: 'Helvetica';
+    }
+
+    h2{
+        color: #8d8d8d;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 22px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        /*Simple fade in animation from 0 opacity. */
+        /*Fill mode forwards allows the animation to keep its final state, post-animation, on the page. */
+        animation: fadeIn 3s 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.photo-container{
+    width: 50%;
+    height: 100%;
+    top: -5%;
+    bottom: -35%;
+    left: 40%;
+    right: 5%;
+    padding-top: 20%;
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+    /* Flex display makes it so when the page gets resized, the page does its absolute best to maintain appropriate positions relative to the dimensions. */
+    display: flex;
+
+    .photoImage{
+        width: 100%;
+        height: auto;
+    }
+    
+    
+}
+
+.photo-zone{
+
+    margin-left: calc(50% - 100px);
+
+    div{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        background: rgba(255, 255, 255, 0.4);
+        text-align: center;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*Each picture gets a box shadow to "illuminate" the picture. */
+        box-shadow: 0 0 20px 0px lightyellow;
+    }
+
+    p{
+        /*Position the caption in the center appropriately. */
+            font-size: 15px;
+            margin-left: (-4%);
+            margin-top: (10%);
+            position: absolute;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 300;
+            min-width: fit-content;
+            opacity: 0;
+            /*I add an animation for dramatic effect, and delay it to reveal last. */
+            animation: fadeIn 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+    }
+}
+
+    /*I add this animation to each photo to have them sequentially appear, which I think looks quite nifty. */
+    /*By choosing to translate by the X or Y axis, I am able to manually position each photo element. */
+    
+.photo1{
+    transform: translateY(-150%);
+    opacity: 0;
+    animation: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 4s;
+}
+
+.photo2{
+    transform: translateY(150%);
+    opacity: 0;
+    animation: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 5s;
+}
+
+.photo3{
+    transform: translateX(150%);
+    opacity: 0;
+    animation: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 6s;
+}
+
+.photo4{
+    transform: translateX(-150%);
+    opacity: 0;
+    animation: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 7s;
+}

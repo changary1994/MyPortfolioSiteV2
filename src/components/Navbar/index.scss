@@ -1,0 +1,142 @@
+.nav-bar{
+    background: #181717;
+    /*This creates the navbar along the left of the screen*/
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /*I set the z-index higher so that the navbar is on top of the rest of the elements, so the snow effect goes "underneath" it, instead of phasing through it. */
+    z-index: 2;
+    min-height: 500px;
+    .logo {
+        /* Block display encapsulates the element into a block, ensuring it stays in its properly place, and enforcing that rule upon its neighboring elements. */
+        display: block;
+        /* Padding allows me to leave space between neighboring elements. The parameters are for two integer pixels, first parameter for top and bottom padding, second for left and right.*/
+        padding: 8px 0;
+        img{
+            /* This targets the logo on the top right and fits it properly into its place. */
+            display: block;
+            margin: 8px auto;
+            width: 60px;
+            height: auto;
+        }
+    }
+
+    /*This targets the individual nav links, and positions them properly. */
+    nav{
+        text-align: center;
+        position: absolute;
+        height: 100%;
+        top: 45%;
+        margin-top: -170px;
+        width: 100%;
+        a{
+            /*This manipulates the actual link itself, the text that will navigate the user to another page. */
+            font-size: 22px;
+            color: #4d4d4e;
+            display: block;
+            line-height: 61px;
+            height: 100px;
+            position: relative;
+            /*Text-decoration none removes the line under a link and stops the link from changing colors when picked. */
+            text-decoration: none;
+            /*This removes the original icon when hovered by phasing it out. */
+            i{
+                transition: all 0.3s ease-out;
+            }
+            /* When hovered, the color changes, and the icon changes to 0 opacity, masking it completely. Instead, the text underneath fades in to reveal the link. */
+            &:hover {
+                color: #3BBA9C;
+                
+                svg{
+                    opacity: 0;
+                }
+                &:after {
+                    opacity: 1;
+                }
+            }
+            
+            /*This targets the text that comes after, and styles them accordingly. */
+            &:after {
+                content: '';
+                font-size: 9px;
+                letter-spacing: 2px;
+                position: relative;
+                display: block;
+                line-height: 61px;
+                margin-top: -60px;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.3 ease-out;
+            }
+        }
+
+        /*This changes what should be shown to the user when hovered over the link.*/
+        a.home-link{
+            &:after{
+                content: 'HOME';
+            }
+        }
+        
+        a.about-link{
+            &:after{
+                content: 'ABOUT';
+            }
+        }
+
+        a.portfolio-link{
+            &:after{
+                content: 'PROJECTS';
+            }
+        }
+
+        a.contact-link{
+            &:after{
+                content: 'CONTACT';
+            }
+        }
+
+        a.homework-link{
+            &:after{
+                content: 'HOMEWORK';
+            }
+        }
+
+        a.labs-link{
+            &:after{
+                content: 'LABS';
+            }
+        }
+
+        a.active{
+            svg{
+                color: #3BBA9C;
+            }
+        }
+
+    }
+
+    ul{
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        display: block;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+
+        li{
+            a {
+                padding: 7px 0;
+                display: block;
+                font-size: 22px;
+                line-height: 16px;
+                /*This changes the color of the icons at the bottom of the page if it is hovered. */
+                &:hover svg {
+                    color: #3BBA9C;
+                }
+            }
+        }
+    }
+}

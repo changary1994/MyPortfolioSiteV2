@@ -1,0 +1,28 @@
+$primary-color: #3BBA9C;
+
+@import 'animate.css';
+
+@import '~loaders.css/src/animations/ball-pulse-sync.scss';
+
+
+
+input,
+textarea{
+  font-family: 'Helvetica Neue';
+}
+
+.loader-active{
+  /* This code ensures that the loader is properly positioned and will fade out after 1 second.  */
+  display: block;
+  /* Position absolute takes the logo out of the flow of the page and allows it to be placed exactly where I want it, that is, the center of the screen. */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
+}
