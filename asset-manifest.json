@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cb5d44f4.css",
+    "main.js": "/static/js/main.82e8b163.js",
+    "static/js/787.4c51b762.chunk.js": "/static/js/787.4c51b762.chunk.js",
+    "static/media/Josh.jpg": "/static/media/Josh.bb4002a8fc19e6b5c77b.jpg",
+    "static/media/animation.gif": "/static/media/animation.4c53671d89591e7bb45a.gif",
+    "static/media/ProjectButterfly.png": "/static/media/ProjectButterfly.6ec54ee9c902ab85dcdf.png",
+    "static/media/ProjectPokemonEncounter.png": "/static/media/ProjectPokemonEncounter.acd2a22a26463f2f025a.png",
+    "static/media/Daniel.jpg": "/static/media/Daniel.f9e06bd77e4926bb9249.jpg",
+    "static/media/SuzPhoebe.jpg": "/static/media/SuzPhoebe.55a6291b2700cb37753a.jpg",
+    "static/media/Family.jpg": "/static/media/Family.6cd14fb8b11067e6072e.jpg",
+    "static/media/logo_sub.png": "/static/media/logo_sub.3b5e5661ff7e01267d66.png",
+    "index.html": "/index.html",
+    "main.cb5d44f4.css.map": "/static/css/main.cb5d44f4.css.map",
+    "main.82e8b163.js.map": "/static/js/main.82e8b163.js.map",
+    "787.4c51b762.chunk.js.map": "/static/js/787.4c51b762.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb5d44f4.css",
+    "static/js/main.82e8b163.js"
+  ]
+}
